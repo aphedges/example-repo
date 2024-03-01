@@ -1,0 +1,9 @@
+# Project files
+.env
+/.cache/
+/data/
+
+# Python files
+.mypy_cache/
+.ruff_cache/
+__pycache__/

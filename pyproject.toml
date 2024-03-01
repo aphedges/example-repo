@@ -1,0 +1,66 @@
+[project]
+requires-python = ">=3.11"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.codespell]
+ignore-regex = "\\[nt]" # Do not count escaped newlines or tabs as part of a word
+ignore-words-list = "astroid" # Dependency of pylint
+quiet-level = 0 # Display all warnings
+check-filenames = ""
+check-hidden = ""
+
+[tool.mypy]
+show_error_codes = true
+ignore_missing_imports = true
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+
+[tool.ruff]
+fix = true
+ignore-init-module-imports = true
+line-length = 100
+select = [
+    "D",
+    "E",
+    "F",
+    "I001",
+    "I002",
+    "W",
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+
+[tool.ruff.lint.pycodestyle]
+# Detect extra-long lines that Black can't handle
+max-line-length = 250
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pylint.format]
+# Let other tools handle line length
+max-line-length = 250
+
+[tool.pylint.imports]
+# Need to either set this or stop using the `import X as X` that mypy wants
+allow-reexport-from-package = true
+
+[tool.pylint.messages_control]
+# Most of these are disabled to prevent issues with dependencies being difficult to inspect
+# pylint FAQ recommends disabling:
+# wrong-import-order when using isort
+# missing-module-docstring,missing-class-docstring,missing-function-docstring when using pydocstyle
+disable = """
+R,fixme,no-member,unsupported-membership-test,unsubscriptable-object,
+unsupported-assignment-operation,not-an-iterable,too-many-lines,wrong-import-order,
+missing-module-docstring,missing-class-docstring,missing-function-docstring
+"""
+
+[tool.pylint.reports]
+score = false
