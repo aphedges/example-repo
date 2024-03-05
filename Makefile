@@ -11,6 +11,14 @@ export PYTHONPATH := $(shell realpath .)
 .PHONY: reqs-freeze
 reqs-freeze:
 	pip freeze >requirements-lock.txt
+	# Strip local versions so PyTorch is the same on Linux and macOS
+	sed --in-place -e 's/+[[:alnum:]]\+$$//g' requirements-lock.txt
+	# Remove DeepSpeed because it cannot be installed automatically
+	sed --in-place -e '/^deepspeed==.*/d' requirements-lock.txt
+	# Remove triton because it cannot be installed on macOS
+	# The package has no sdists, and its wheels are Linux-only
+	# It installs automatically on Linux as a requirement of PyTorch
+	sed --in-place -e '/^triton==.*/d' requirements-lock.txt
 
 .PHONY: black
 black:
@@ -20,13 +28,15 @@ black:
 codespell:
 	pre-commit run --all-files codespell
 
-.PHONY: mypy
-mypy:
-	mypy $(PYTHON_FILES)
-
 .PHONY: markdownlint
 markdownlint:
 	pre-commit run --all-files markdownlint
+
+.PHONY: mypy
+mypy:
+ifneq ($(PYTHON_FILES),)
+	mypy $(PYTHON_FILES)
+endif
 
 .PHONY: prettier
 prettier:
@@ -34,7 +44,9 @@ prettier:
 
 .PHONY: pylint
 pylint:
+ifneq ($(PYTHON_FILES),)
 	pylint $(PYTHON_FILES)
+endif
 
 .PHONY: ruff
 ruff:
@@ -43,6 +55,14 @@ ruff:
 .PHONY: shellcheck
 shellcheck:
 	pre-commit run --all-files shellcheck
+
+.PHONY: shfmt
+shfmt:
+	pre-commit run --all-files shfmt
+
+.PHONY: yamllint
+yamllint:
+	pre-commit run --all-files yamllint
 
 .PHONY: precommit
 precommit:
@@ -56,9 +76,14 @@ fix: reqs-freeze check
 
 .PHONY: update
 update:
-	pip install --upgrade pip setuptools wheel
+	pip install --upgrade pip
 	pip install --upgrade -r requirements-lock.txt
+
+.PHONY: upgrade
+upgrade:
+	pip install --upgrade pip
+	pip install --upgrade --upgrade-strategy eager -r requirements.txt -r requirements-dev.txt
 
 .PHONY: install
 install:
-	bash setup.sh
+	make update

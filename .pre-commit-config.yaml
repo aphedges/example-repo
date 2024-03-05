@@ -4,17 +4,11 @@
 #   pre-commit autoupdate
 default_language_version:
   # Use latest LTS release
-  node: 20.10.0
+  node: 20.11.1
 repos:
   - repo: meta
     hooks:
       - id: check-useless-excludes
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    # Ruff version.
-    rev: v0.1.11
-    hooks:
-      - id: ruff
-        args: [--exit-non-zero-on-fix]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -43,11 +37,12 @@ repos:
         args: [--fix=lf]
       - id: name-tests-test
         args: [--unittest]
-      - id: no-commit-to-branch
+      # TODO: Eventually, prevent working on `main`
+      # - id: no-commit-to-branch
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
-    rev: 23.12.1
+    rev: 24.2.0
     hooks:
       - id: black
   - repo: https://github.com/pre-commit/mirrors-prettier
@@ -55,21 +50,34 @@ repos:
     hooks:
       - id: prettier
         additional_dependencies:
-          - prettier@3.1.1
+          - prettier@3.2.5
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.8.0-1
+    hooks:
+      - id: shfmt
+        args: [
+            --write,
+            --indent=2,
+            --case-indent, # Switch cases will be indented.
+          ]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.0
+    hooks:
+      - id: ruff
+        args: [--exit-non-zero-on-fix]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.38.0
+    rev: v0.39.0
     hooks:
       - id: markdownlint
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.33.0
+    rev: v1.35.1
     hooks:
       - id: yamllint
         args: [--strict]
-  - repo: https://github.com/shellcheck-py/shellcheck-py # Unofficial but maintained by asottile
+  - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.9.0.6
     hooks:
       - id: shellcheck
-        args: [--exclude=SC1091, --shell=bash]
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.6
     hooks:

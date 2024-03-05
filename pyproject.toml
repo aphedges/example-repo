@@ -3,7 +3,6 @@ requires-python = ">=3.11"
 
 [tool.black]
 line-length = 100
-target-version = ["py311"]
 
 [tool.codespell]
 ignore-regex = "\\[nt]" # Do not count escaped newlines or tabs as part of a word
@@ -21,15 +20,16 @@ warn_unreachable = true
 
 [tool.ruff]
 fix = true
-ignore-init-module-imports = true
 line-length = 100
+
+[tool.ruff.lint]
+ignore-init-module-imports = true
 select = [
-    "D",
-    "E",
-    "F",
-    "I001",
-    "I002",
-    "W",
+  "D", # pydocstyle
+  "E", # pycodestyle error
+  "F", # pyflakes
+  "I", # isort
+  "W", # pycodestyle warning
 ]
 
 [tool.ruff.lint.isort]

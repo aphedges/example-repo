@@ -3,7 +3,21 @@
 /.cache/
 /data/
 
+# JavaScript files
+.node-version
+node_modules/
+
+# JetBrains IDE files
+.idea/
+
+# macOS files
+.DS_Store
+
 # Python files
 .mypy_cache/
+.python-version
 .ruff_cache/
 __pycache__/
+
+# Other files
+.envrc
