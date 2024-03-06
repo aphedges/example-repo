@@ -7,3 +7,7 @@ extends: null
 # line-length
 # Let Prettier handle formatting
 MD013: false
+
+# no-duplicate-heading
+MD024:
+  siblings_only: true
