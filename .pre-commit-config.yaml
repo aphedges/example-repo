@@ -37,8 +37,7 @@ repos:
         args: [--fix=lf]
       - id: name-tests-test
         args: [--unittest]
-      # TODO: Eventually, prevent working on `main`
-      # - id: no-commit-to-branch
+      - id: no-commit-to-branch
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
