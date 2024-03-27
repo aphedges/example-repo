@@ -21,10 +21,10 @@ endif
 	sed --in-place -e 's/+[[:alnum:]]\+$$//g' requirements-lock.txt
 	# Remove DeepSpeed because it cannot be installed automatically
 	sed --in-place -e '/^deepspeed==.*/d' requirements-lock.txt
-	# Remove triton because it cannot be installed on macOS
-	# The package has no sdists, and its wheels are Linux-only
-	# It installs automatically on Linux as a requirement of PyTorch
-	sed --in-place -e '/^triton==.*/d' requirements-lock.txt
+	# Remove nvidia-* and triton because they cannot be installed on macOS
+	# The packages have no sdists, and their wheels are not available for macOS
+	# They install automatically on Linux as a requirement of PyTorch
+	sed --in-place -e '/^\(nvidia-.*\|triton\)==.*/d' requirements-lock.txt
 
 .PHONY: black
 black:
