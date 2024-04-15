@@ -8,8 +8,8 @@ PYTHON_FILES=$(shell git ls-files '*.py' | sort | tr '\n' ' ')
 
 export PYTHONPATH := $(shell realpath .)
 
-.PHONY: reqs-freeze
-reqs-freeze:
+.PHONY: lock
+lock:
 	# Complex logic needed to pin `setuptools` but not `pip` in Python 3.11 and earlier
 	PYTHON_VERSION_AT_LEAST_3_12=$(shell python -c 'import sys; print(int(sys.version_info >= (3, 12)))')
 ifeq ($(PYTHON_VERSION_AT_LEAST_3_12),1)
@@ -76,7 +76,7 @@ precommit:
 check: precommit mypy pylint
 
 .PHONY: fix
-fix: reqs-freeze check
+fix: lock check
 
 .PHONY: update
 update:
