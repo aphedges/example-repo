@@ -22,9 +22,9 @@ If the installation process fails, is interrupted, or for any reason needs to be
 
 ## Contributing
 
-This project uses [pre-commit](https://pre-commit.com/), which is automatically installed with the rest of the development requirements.
+This project uses various code quality tooling, all of which is automatically installed with the rest of the development requirements.
 
-Pre-commit checks can now run automatically when you make a commit. If you want to run a subset of checks for formatting `make precommit` still runs some checks.
+All checks can be run with `make check`, and some additional automatic changes can be run with `make fix`.
 
 ## License
 
