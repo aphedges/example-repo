@@ -14,7 +14,7 @@ When setting up this repository, make sure to complete the following steps:
 
 Use the provided Makefile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.11 before running this command:
 
-```bash
+```shell
 make install
 ```
 
