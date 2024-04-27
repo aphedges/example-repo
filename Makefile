@@ -17,6 +17,8 @@ ifeq ($(PYTHON_VERSION_AT_LEAST_3_12),1)
 else
 	pip freeze --all --exclude pip >requirements-lock.txt
 endif
+	# Remove editable packages because they are expected to be available locally
+	sed --in-place -e '/^-e .*/d' requirements-lock.txt
 	# Strip local versions so PyTorch is the same on Linux and macOS
 	sed --in-place -e 's/+[[:alnum:]]\+$$//g' requirements-lock.txt
 	# Remove nvidia-* and triton because they cannot be installed on macOS
