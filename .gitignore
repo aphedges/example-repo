@@ -30,8 +30,13 @@ node_modules/
 *.py[cod]
 __pycache__/
 # Code quality tooling files
+.coverage
+.coverage.*
 .mypy_cache/
+.nox/
 .ruff_cache/
+.tox/
+htmlcov/
 # Distribution / packaging files
 *.egg-info/
 # Jupyter notebook files
