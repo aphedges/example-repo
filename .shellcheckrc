@@ -1,3 +1,5 @@
 enable=add-default-case # https://github.com/koalaman/shellcheck/wiki/SC2249
 enable=avoid-nullary-conditions # https://github.com/koalaman/shellcheck/wiki/SC2244
 enable=require-double-brackets # https://github.com/koalaman/shellcheck/wiki/SC2292
+disable=SC1090 # "Can't follow non-constant source. Use a directive to specify location"; https://www.shellcheck.net/wiki/SC1090
+disable=SC1091 # "Not following: (error message here)"; https://www.shellcheck.net/wiki/SC1091
