@@ -30,8 +30,14 @@ select = [
   "E", # pycodestyle error
   "F", # pyflakes
   "I", # isort
+  "PTH", # flake8-use-pathlib
   "UP", # pyupgrade
   "W", # pycodestyle warning
+]
+ignore = [
+  # Do not switch to `Path.open()` because `open()` is easier to test with
+  # e.g., `open(data_dir / "file_a.txt")` -> `open("test/file_b.txt")`
+  "PTH123", # builtin-open (from flake8-use-pathlib)
 ]
 
 [tool.ruff.lint.isort]
