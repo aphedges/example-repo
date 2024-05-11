@@ -14,7 +14,7 @@ When setting up this repository, make sure to complete the following steps:
 
 Use the provided Makefile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.11 before running this command:
 
-```bash
+```shell
 make install
 ```
 
@@ -22,9 +22,9 @@ If the installation process fails, is interrupted, or for any reason needs to be
 
 ## Contributing
 
-This project uses [pre-commit](https://pre-commit.com/), which is automatically installed with the rest of the development requirements.
+This project uses various code quality tooling, all of which is automatically installed with the rest of the development requirements.
 
-Pre-commit checks can now run automatically when you make a commit. If you want to run a subset of checks for formatting `make precommit` still runs some checks.
+All checks can be run with `make check`, and some additional automatic changes can be run with `make fix`.
 
 ## License
 
