@@ -4,7 +4,7 @@
 #   pre-commit autoupdate
 default_language_version:
   # Use latest LTS release
-  node: 20.12.2
+  node: 20.13.1
 repos:
   - repo: meta
     hooks:
@@ -39,7 +39,7 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
-    rev: 24.4.1
+    rev: 24.4.2
     hooks:
       - id: black
   - repo: https://github.com/pre-commit/mirrors-prettier
@@ -58,12 +58,12 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.1
+    rev: v0.4.4
     hooks:
       - id: ruff
         args: [--exit-non-zero-on-fix]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.39.0
+    rev: v0.40.0
     hooks:
       - id: markdownlint
   - repo: https://github.com/adrienverge/yamllint
