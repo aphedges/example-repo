@@ -38,6 +38,14 @@ repos:
       - id: no-commit-to-branch
       - id: requirements-txt-fixer
       - id: trailing-whitespace
+  - repo: https://github.com/sirosen/texthooks
+    rev: 0.6.6
+    hooks:
+      - id: alphabetize-codeowners
+      - id: fix-ligatures
+      - id: fix-smartquotes
+      - id: fix-spaces
+      - id: forbid-bidi-controls
   - repo: https://github.com/psf/black
     rev: 24.4.2
     hooks:
