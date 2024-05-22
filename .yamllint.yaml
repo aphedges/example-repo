@@ -17,3 +17,9 @@ rules:
   document-start: disable
   empty-values: enable
   octal-values: enable
+  # yamllint assumes that values like `01:23` are strings, not base-60 numbers.
+  # This is correct for YAML v1.2 but not YAML v1.1.
+  # When using literals of this form that should be treated as strings,
+  # further configuration is needed.
+  quoted-strings:
+    required: only-when-needed
