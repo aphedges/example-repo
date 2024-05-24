@@ -15,7 +15,10 @@ rules:
   trailing-spaces: enable
 
   document-start: disable
-  empty-values: enable
+  empty-values:
+    # YAML keys with empty values are common, so allow them
+    # This still forbids keys with empty values in embedded JSON-like objects
+    forbid-in-block-mappings: false
   octal-values: enable
   # yamllint assumes that values like `01:23` are strings, not base-60 numbers.
   # This is correct for YAML v1.2 but not YAML v1.1.
