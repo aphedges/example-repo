@@ -19,7 +19,10 @@ rules:
     # YAML keys with empty values are common, so allow them
     # This still forbids keys with empty values in embedded JSON-like objects
     forbid-in-block-mappings: false
-  octal-values: enable
+  # Allow `0o755` but not `0755`
+  # Octal values are sometimes used for expressing permissions, so they should not be prohibited
+  octal-values:
+    forbid-explicit-octal: false
   # yamllint assumes that values like `01:23` are strings, not base-60 numbers.
   # This is correct for YAML v1.2 but not YAML v1.1.
   # When using literals of this form that should be treated as strings,
