@@ -23,7 +23,6 @@ fix = true
 line-length = 100
 
 [tool.ruff.lint]
-ignore-init-module-imports = true
 select = [
   "B", # flake8-bugbear
   "D", # pydocstyle
