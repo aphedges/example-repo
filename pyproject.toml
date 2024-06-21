@@ -24,14 +24,32 @@ line-length = 100
 
 [tool.ruff.lint]
 select = [
+  "A", # flake8-builtins
+  "ASYNC", # flake8-async
   "B", # flake8-bugbear
+  "BLE", # flake8-blind-except
+  "C4", # flake8-comprehensions
+  "CPY", # flake8-copyright (will require spdx changes)
   "D", # pydocstyle
+  "DTZ", # flake8-datetimez
   "E", # pycodestyle error
   "F", # pyflakes
+  "FBT", # flake8-boolean-trap
+  "G", # flake8-logging-format
   "I", # isort
+  "ICN", # flake8-import-conventions
+  "INP", # flake8-no-pep420
+  "ISC", # flake8-implicit-str-concat
+  "LOG", # flake8-logging
+  "N", # pep8-naming
+  "PIE", # flake8-pie
   "PTH", # flake8-use-pathlib
+  "PYI", # flake8-pyi
+  "S", # flake8-bandit (but very selective, it's very picky!)
+  "T10", # flake8-debugger
   "UP", # pyupgrade
   "W", # pycodestyle warning
+  "YTT", # flake8-2020
 ]
 ignore = [
   # Do not switch to `Path.open()` because `open()` is easier to test with
