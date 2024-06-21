@@ -55,6 +55,10 @@ ignore = [
   # Do not switch to `Path.open()` because `open()` is easier to test with
   # e.g., `open(data_dir / "file_a.txt")` -> `open("test/file_b.txt")`
   "PTH123", # builtin-open (from flake8-use-pathlib)
+  # TODO: Write explanation
+  "S101", # assert (from flake8-bandit)
+  # TODO: Write explanation
+  "S311", # suspicious-non-cryptographic-random-usage (from flake8-bandit)
 ]
 
 [tool.ruff.lint.isort]
