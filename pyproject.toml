@@ -21,6 +21,7 @@ warn_unreachable = true
 [tool.ruff]
 fix = true
 line-length = 100
+show-fixes = true
 
 [tool.ruff.lint]
 select = [
