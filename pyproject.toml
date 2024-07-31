@@ -22,6 +22,8 @@ warn_unreachable = true
 [tool.ruff]
 fix = true
 line-length = 100
+# Show full violation messages by setting `RUFF_OUTPUT_FORMAT=full` in environment
+output-format = "concise"
 show-fixes = true
 
 [tool.ruff.lint]
