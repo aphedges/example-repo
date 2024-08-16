@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: Run checks
     env:
-      PYTHON_VERSION: 3.12.3
+      PYTHON_VERSION: 3.12.5
     defaults:
       run:
         shell: bash -leo pipefail {0}
