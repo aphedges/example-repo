@@ -86,6 +86,12 @@ repos:
     rev: v1.7.1
     hooks:
       - id: actionlint
+  - repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 38.72.1
+    hooks:
+      - id: renovate-config-validator
+        args:
+          - --strict
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
     hooks:

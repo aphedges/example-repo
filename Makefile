@@ -58,6 +58,10 @@ ifneq ($(PYTHON_FILES),)
 	pylint $(PYTHON_FILES)
 endif
 
+.PHONY: renovate-validate
+renovate-validate:
+	pre-commit run --all-files renovate-config-validator
+
 .PHONY: ruff
 ruff:
 	pre-commit run --all-files ruff

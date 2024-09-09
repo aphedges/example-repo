@@ -1,0 +1,12 @@
+// https://docs.renovatebot.com/
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Update all dependencies in repository",
+  extends: [
+    // https://docs.renovatebot.com/upgrade-best-practices/
+    "config:best-practices",
+    // https://docs.renovatebot.com/modules/manager/pre-commit/
+    ":enablePreCommit",
+  ],
+  reviewersFromCodeOwners: true,
+}
