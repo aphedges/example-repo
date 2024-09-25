@@ -93,3 +93,9 @@ repos:
         additional_dependencies:
           # `tomllib` was added to stdlib in Python 3.11
           - tomli==2.0.1 ; python_version < "3.11"
+  - repo: https://github.com/lycheeverse/lychee
+    rev: v0.15.1
+    hooks:
+      - id: lychee
+        # Only run manually because it can have false positives and spurious failures
+        stages: [manual]
