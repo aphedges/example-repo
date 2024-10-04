@@ -14,6 +14,11 @@ rules:
   new-lines: disable # Let end-of-file-fixer handle formatting
   trailing-spaces: enable
 
+  braces:
+    forbid: non-empty
+  brackets:
+    forbid: non-empty
+
   document-start: disable
   empty-values:
     # YAML keys with empty values are common, so allow them
