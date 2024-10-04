@@ -28,15 +28,18 @@ repos:
       - id: debug-statements
       - id: destroyed-symlinks
       - id: detect-aws-credentials
-        args: [--allow-missing-credentials]
+        args:
+          - --allow-missing-credentials
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: forbid-submodules
       - id: mixed-line-ending
-        args: [--fix=lf]
+        args:
+          - --fix=lf
       - id: name-tests-test
-        args: [--unittest]
+        args:
+          - --unittest
       - id: no-commit-to-branch
       - id: requirements-txt-fixer
       - id: trailing-whitespace
@@ -60,16 +63,16 @@ repos:
     rev: v3.9.0-1
     hooks:
       - id: shfmt
-        args: [
-            --write,
-            --indent=2,
-            --case-indent, # Switch cases will be indented.
-          ]
+        args:
+          - --write
+          - --indent=2
+          - --case-indent # Switch cases will be indented.
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.6.9
     hooks:
       - id: ruff
-        args: [--exit-non-zero-on-fix]
+        args:
+          - --exit-non-zero-on-fix
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.42.0
     hooks:
@@ -78,7 +81,8 @@ repos:
     rev: v1.35.1
     hooks:
       - id: yamllint
-        args: [--strict]
+        args:
+          - --strict
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:
@@ -99,4 +103,5 @@ repos:
     hooks:
       - id: lychee
         # Only run manually because it can have false positives and spurious failures
-        stages: [manual]
+        stages:
+          - manual
