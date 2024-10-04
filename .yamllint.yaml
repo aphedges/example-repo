@@ -6,6 +6,7 @@ rules:
   commas: disable
   comments:
     min-spaces-from-content: 1 # Match Prettier formatting
+  comments-indentation: disable
   empty-lines: disable
   hyphens: disable
   indentation: disable
