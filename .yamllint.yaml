@@ -38,6 +38,7 @@ rules:
   # further configuration is needed.
   quoted-strings:
     required: only-when-needed
+    check-keys: true
   truthy:
     # YAML keys are parsed as booleans the same way as values, so they are checked by default
     # GitHub Actions uses the key `on`, which is considered a boolean in YAML v1.1 but not YAML v1.2
