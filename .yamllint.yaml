@@ -19,7 +19,10 @@ rules:
   brackets:
     forbid: non-empty
 
-  document-start: disable
+  document-end:
+    present: false
+  document-start:
+    present: false
   empty-values:
     # YAML keys with empty values are common, so allow them
     # This still forbids keys with empty values in embedded JSON-like objects
