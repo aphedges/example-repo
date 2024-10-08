@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   checks:
-    runs-on: ubuntu-22.04 # Pinned version of `ubuntu-latest`
+    runs-on: ubuntu-24.04 # Pinned version of `ubuntu-latest`
     name: Run checks
     env:
       PYTHON_VERSION: 3.12.7
