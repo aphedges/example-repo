@@ -12,7 +12,7 @@ When setting up this repository, make sure to complete the following steps:
 
 ## Installation
 
-Use the provided Makefile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.11 before running this command:
+Use the provided Makefile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.12 before running this command:
 
 ```shell
 make install
