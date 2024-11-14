@@ -98,5 +98,9 @@ repos:
     rev: lychee-v0.16.1
     hooks:
       - id: lychee
+        stages: [pre-commit]
+        args:
+          - --offline
+      - id: lychee
         # Only run manually because it can have false positives and spurious failures
         stages: [manual]
