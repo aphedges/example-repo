@@ -101,6 +101,9 @@ repos:
         stages: [pre-commit]
         args:
           - --offline
+          - --require-https
       - id: lychee
         # Only run manually because it can have false positives and spurious failures
         stages: [manual]
+        args:
+          - --require-https
