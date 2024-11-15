@@ -75,6 +75,12 @@ ignore = [
   # Most code we work with is not cryptographically sensitive,
   # so the `random` module is safe to use
   "S311", # suspicious-non-cryptographic-random-usage (from flake8-bandit)
+  # Allow parsing XML from untrusted sources
+  # The Python documentation (https://docs.python.org/3.13/library/xml.html#xml-vulnerabilities)
+  # states that the vulnerabilities are denial-of-service attacks, which are not much of a concern
+  # to us. In addition, the vulnerabilities are in Expat itself, so these vulnerabilities have been
+  # patched when using recent versions of the library.
+  "S314", # suspicious-xml-element-tree-usage (from flake8-bandit)
   # Ternary expressions are often less readable than `if`-`else` blocks,
   # so they should not be required
   "SIM108", # if-else-block-instead-of-if-exp (from flake8-simplify)
