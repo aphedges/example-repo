@@ -4,7 +4,7 @@
 #   pre-commit autoupdate
 default_language_version:
   # Use latest LTS release
-  node: 22.11.0
+  node: 22.13.0
 repos:
   - repo: meta
     hooks:
@@ -66,7 +66,7 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.2
+    rev: v0.9.1
     hooks:
       - id: ruff
         args: [--exit-non-zero-on-fix]
@@ -84,7 +84,7 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.4
+    rev: v1.7.6
     hooks:
       - id: actionlint
   - repo: https://github.com/codespell-project/codespell
@@ -95,7 +95,7 @@ repos:
           # `tomllib` was added to stdlib in Python 3.11
           - tomli==2.2.1 ; python_version < "3.11"
   - repo: https://github.com/lycheeverse/lychee
-    rev: lychee-v0.17.0
+    rev: lychee-v0.18.0
     hooks:
       - id: lychee
         # Only run manually because it can have false positives and spurious failures
