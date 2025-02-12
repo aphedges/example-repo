@@ -94,6 +94,22 @@ repos:
         additional_dependencies:
           # `tomllib` was added to stdlib in Python 3.11
           - tomli==2.2.1 ; python_version < "3.11"
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        language: system
+        entry: mypy
+        types:
+          - python
+        require_serial: true
+      - id: pylint
+        name: pylint
+        language: system
+        entry: pylint
+        types:
+          - python
+        require_serial: true
   - repo: https://github.com/lycheeverse/lychee
     rev: lychee-v0.18.0
     hooks:
