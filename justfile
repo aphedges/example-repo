@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: Alex Hedges <git@alexhedges.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
 # `just` `1.55.0` introduced `minimum-version` setting
 set minimum-version := "1.55.0"
 
