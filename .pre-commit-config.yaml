@@ -2,6 +2,7 @@
 #   pre-commit run --all-files
 # Update this file:
 #   pre-commit autoupdate
+minimum_pre_commit_version: 1.15.0
 default_language_version:
   # Use latest LTS release
   node: 22.13.0
