@@ -94,4 +94,4 @@ upgrade:
 
 .PHONY: install
 install:
-	make update
+	$(MAKE) update
