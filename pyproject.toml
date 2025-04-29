@@ -11,7 +11,7 @@ dev = [
 ]
 
 [project]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 [tool.black]
 line-length = 100
@@ -27,7 +27,7 @@ check-hidden = ""
 [tool.mypy]
 show_error_codes = true
 ignore_missing_imports = true
-python_version = "3.11"
+python_version = "3.12"
 strict = true
 warn_unreachable = true
 
