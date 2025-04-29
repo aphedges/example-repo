@@ -5,7 +5,9 @@ dev = [
   "mypy[faster-cache]>=1.13",
   # `pre-commit` `1.15.0` introduced `minimum_pre_commit_version` top-level key
   "pre-commit>=1.15.0",
-  "pylint",
+  # Set a minimum version (released 2023-10-02, first to support `3.12`)
+  # to prevent possible resolution problems
+  "pylint>=3",
 ]
 
 [project]
