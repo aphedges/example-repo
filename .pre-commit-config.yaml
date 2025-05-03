@@ -5,7 +5,7 @@
 minimum_pre_commit_version: 1.15.0
 default_language_version:
   # Use latest LTS release
-  node: 22.14.0
+  node: 22.15.0
 repos:
   - repo: meta
     hooks:
@@ -67,7 +67,7 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.2
+    rev: v0.11.8
     hooks:
       - id: ruff
         args: [--exit-non-zero-on-fix]
