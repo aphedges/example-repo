@@ -1,5 +1,17 @@
+[dependency-groups]
+base = []
+dev = [
+  # `mypy` `1.13.0` introduced `faster-cache` extra
+  "mypy[faster-cache]>=1.13",
+  # `pre-commit` `1.15.0` introduced `minimum_pre_commit_version` top-level key
+  "pre-commit>=1.15.0",
+  # Set a minimum version (released 2023-10-02, first to support `3.12`)
+  # to prevent possible resolution problems
+  "pylint>=3",
+]
+
 [project]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 [tool.black]
 line-length = 100
@@ -15,7 +27,7 @@ check-hidden = ""
 [tool.mypy]
 show_error_codes = true
 ignore_missing_imports = true
-python_version = "3.11"
+python_version = "3.12"
 strict = true
 warn_unreachable = true
 

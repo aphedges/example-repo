@@ -1,4 +1,0 @@
-mypy[faster-cache]>=1.13
-# `pre-commit` `1.15.0` introduced `minimum_pre_commit_version` top-level key
-pre-commit>=1.15.0
-pylint
