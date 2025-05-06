@@ -49,7 +49,8 @@ repos:
       - id: fix-smartquotes
       - id: fix-spaces
       - id: forbid-bidi-controls
-  - repo: https://github.com/psf/black
+  # Use mirror for `mypyc`-compiled `black`
+  - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 25.1.0
     hooks:
       - id: black
