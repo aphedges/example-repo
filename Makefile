@@ -56,6 +56,10 @@ prettier:
 pylint:
 	pre-commit run --all-files pylint
 
+.PHONY: renovate-validate
+renovate-validate:
+	pre-commit run --all-files renovate-config-validator
+
 .PHONY: ruff
 ruff:
 	pre-commit run --all-files ruff

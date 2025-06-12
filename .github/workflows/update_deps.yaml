@@ -1,0 +1,20 @@
+name: Renovate
+
+on:
+  schedule:
+    # Run weekly
+    - cron: 0 0 * * 0
+  workflow_dispatch: # Enable workflow to be run manually
+
+jobs:
+  renovate:
+    runs-on: ubuntu-22.04 # Pinned version of `ubuntu-latest`
+    name: Run Renovate
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v42.0.5
+        with:
+          token: ${{ secrets.RENOVATE_TOKEN }}
