@@ -72,6 +72,10 @@ shfmt:
 yamllint:
 	pre-commit run --all-files yamllint
 
+.PHONY: zizmor
+zizmor:
+	pre-commit run --all-files zizmor
+
 .PHONY: precommit
 precommit:
 	pre-commit run --all-files
