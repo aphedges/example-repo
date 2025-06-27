@@ -58,7 +58,7 @@ pylint:
 
 .PHONY: ruff
 ruff:
-	pre-commit run --all-files ruff
+	pre-commit run --all-files ruff-check
 
 .PHONY: shellcheck
 shellcheck:
