@@ -48,6 +48,7 @@ repos:
       - id: fix-ligatures
       - id: fix-smartquotes
       - id: fix-spaces
+      - id: fix-unicode-dashes
       - id: forbid-bidi-controls
   # Use mirror for `mypyc`-compiled `black`
   - repo: https://github.com/psf/black-pre-commit-mirror
