@@ -28,10 +28,6 @@ endif
 actionlint:
 	pre-commit run --all-files actionlint
 
-.PHONY: black
-black:
-	pre-commit run --all-files black
-
 .PHONY: codespell
 codespell:
 	pre-commit run --all-files codespell
@@ -59,6 +55,10 @@ pylint:
 .PHONY: ruff
 ruff:
 	pre-commit run --all-files ruff-check
+
+.PHONY: ruff-format
+ruff-format:
+	pre-commit run --all-files ruff-format
 
 .PHONY: shellcheck
 shellcheck:
