@@ -26,19 +26,19 @@ jobs:
     runs-on: ubuntu-22.04 # Pinned version of `ubuntu-latest`
     name: Run checks
     env:
-      PYTHON_VERSION: 3.12.11
+      PYTHON_VERSION: 3.12.12
     defaults:
       run:
         shell: bash -leo pipefail {0}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # Prevent credentials from being accidentally used in other steps
           persist-credentials: false
 
       - name: Initialize Python environment
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
