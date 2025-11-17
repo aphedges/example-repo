@@ -5,7 +5,7 @@
 minimum_pre_commit_version: 1.15.0
 default_language_version:
   # Use latest LTS release
-  node: 22.19.0
+  node: 24.11.1
 repos:
   - repo: meta
     hooks:
@@ -52,7 +52,7 @@ repos:
       - id: forbid-bidi-controls
   # Use mirror for `mypyc`-compiled `black`
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 25.1.0
+    rev: 25.9.0
     hooks:
       - id: black
   - repo: https://github.com/rbubley/mirrors-prettier # Use maintained fork of official mirror
@@ -69,7 +69,7 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.0
+    rev: v0.14.5
     hooks:
       - id: ruff-check
         args: [--exit-non-zero-on-fix]
@@ -87,11 +87,11 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: v1.7.8
     hooks:
       - id: actionlint
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.12.1
+    rev: v1.16.3
     hooks:
       - id: zizmor
         args:
@@ -107,7 +107,7 @@ repos:
       - id: codespell
         additional_dependencies:
           # `tomllib` was added to stdlib in Python 3.11
-          - tomli==2.2.1 ; python_version < "3.11"
+          - tomli==2.3.0 ; python_version < "3.11"
   - repo: local
     hooks:
       - id: mypy
@@ -125,7 +125,7 @@ repos:
           - python
         require_serial: true
   - repo: https://github.com/lycheeverse/lychee
-    rev: lychee-v0.20.1
+    rev: lychee-v0.21.0
     hooks:
       - id: lychee
         # Only run manually because it can have false positives and spurious failures
