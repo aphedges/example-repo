@@ -5,7 +5,7 @@
 minimum_pre_commit_version: 1.15.0
 default_language_version:
   # Use latest LTS release
-  node: 24.14.1
+  node: 24.19.0
 repos:
   - repo: meta
     hooks:
@@ -51,11 +51,11 @@ repos:
       - id: fix-unicode-dashes
       - id: forbid-bidi-controls
   - repo: https://github.com/rbubley/mirrors-prettier # Use maintained fork of official mirror
-    rev: v3.8.1
+    rev: v3.9.6
     hooks:
       - id: prettier
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.13.0-1
+    rev: v3.13.1-1
     hooks:
       - id: shfmt
         args: [
@@ -64,14 +64,14 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.8
+    rev: v0.16.2
     hooks:
       - id: ruff-format
         args: [--exit-non-zero-on-fix]
       - id: ruff-check
         args: [--exit-non-zero-on-fix]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.48.0
+    rev: v0.49.1
     hooks:
       - id: markdownlint
   - repo: https://github.com/adrienverge/yamllint
@@ -88,7 +88,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.23.1
+    rev: v1.29.0
     hooks:
       - id: zizmor
         args:
@@ -99,7 +99,7 @@ repos:
     hooks:
       - id: lint-dependency-groups
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.2
+    rev: v2.4.3
     hooks:
       - id: codespell
         additional_dependencies:
@@ -122,7 +122,7 @@ repos:
           - python
         require_serial: true
   - repo: https://github.com/lycheeverse/lychee
-    rev: lychee-v0.23.0
+    rev: lychee-v0.24.2
     hooks:
       - id: lychee
         # Only run manually because it can have false positives and spurious failures
