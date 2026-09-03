@@ -12,10 +12,10 @@ When setting up this repository, make sure to complete the following steps:
 
 ## Installation
 
-Use the provided Makefile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.13 before running this command:
+Use the provided justfile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.13 before running this command:
 
 ```shell
-make install
+just install
 ```
 
 If the installation process fails, is interrupted, or for any reason needs to be restarted, run `git clean -xdf` to reset the repository's state.
@@ -24,7 +24,7 @@ If the installation process fails, is interrupted, or for any reason needs to be
 
 This project uses various code quality tooling, all of which is automatically installed with the rest of the development requirements.
 
-All checks can be run with `make check`, and some additional automatic changes can be run with `make fix`.
+All checks can be run with `just check`, and some additional automatic changes can be run with `just fix`.
 
 To test GitHub Actions workflows locally, install [`act`](https://github.com/nektos/act) and run it with `act`.
 

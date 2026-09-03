@@ -15,8 +15,3 @@ max_line_length = off
 
 [*.{ipynb,py}]
 indent_size = 4
-
-# Makefiles always use tabs for indentation
-[Makefile]
-indent_size = unset # Allow user-defined tab width
-indent_style = tab
