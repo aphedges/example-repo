@@ -1,0 +1,6 @@
+# Each forge has a separate implementation:
+# - Forgejo docs: https://forgejo.org/docs/latest/user/collaboration/pull-requests-and-git-flow/#review-requests-and-code-owners
+# - GitHub docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# - GitLab docs: https://docs.gitlab.com/user/project/codeowners/
+
+* @aphedges
