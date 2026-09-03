@@ -5,7 +5,7 @@
 minimum_pre_commit_version: 1.15.0
 default_language_version:
   # Use latest LTS release
-  node: 24.19.0
+  node: 24.20.0
 repos:
   - repo: meta
     hooks:
@@ -64,7 +64,7 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.2
+    rev: v0.16.6
     hooks:
       - id: ruff-format
         args: [--exit-non-zero-on-fix]
@@ -80,7 +80,7 @@ repos:
       - id: yamllint
         args: [--strict]
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+    rev: v0.11.0.1-1
     hooks:
       - id: shellcheck
   - repo: https://github.com/rhysd/actionlint
@@ -88,14 +88,14 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.29.0
+    rev: v1.30.0
     hooks:
       - id: zizmor
         args:
           - --fix=safe
           - --strict-collection
   - repo: https://github.com/pypa/dependency-groups
-    rev: 1.3.1
+    rev: 1.3.2
     hooks:
       - id: lint-dependency-groups
   - repo: https://github.com/codespell-project/codespell
