@@ -26,6 +26,10 @@ actionlint:
 codespell:
 	pre-commit run --all-files codespell
 
+.PHONY: just
+just:
+	pre-commit run --all-files just
+
 .PHONY: lychee
 lychee:
 	pre-commit run --all-files --hook-stage manual lychee
