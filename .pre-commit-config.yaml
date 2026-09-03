@@ -107,6 +107,12 @@ repos:
           - tomli==2.4.1 ; python_version < "3.11"
   - repo: local
     hooks:
+      - id: just
+        name: just
+        language: system
+        entry: just --fmt --justfile
+        files: (?i)^\.?justfile$
+        require_serial: true
       - id: mypy
         name: mypy
         language: system
