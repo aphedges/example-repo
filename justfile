@@ -35,6 +35,8 @@ prettier: (precommit "prettier")
 
 pylint: (precommit "pylint")
 
+reuse: (precommit "reuse")
+
 ruff: (precommit "ruff-check")
 
 ruff-format: (precommit "ruff-format")
