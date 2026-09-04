@@ -3,6 +3,7 @@
 # Update this file:
 #   pre-commit autoupdate
 minimum_pre_commit_version: 1.15.0
+minimum_prek_version: 0.4.10
 default_language_version:
   # Use latest LTS release
   node: 24.20.0
