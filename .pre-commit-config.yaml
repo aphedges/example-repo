@@ -9,6 +9,11 @@ default_language_version:
   node: 24.20.0
   # Use latest patch version of an actively supported release
   python: 3.13.15
+update:
+  freeze: true
+  repos:
+    "https://github.com/lycheeverse/lychee":
+      exclude_tags: [nightly]
 repos:
   - repo: meta
     hooks:
