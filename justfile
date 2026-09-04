@@ -74,4 +74,4 @@ upgrade:
     pip install --upgrade --upgrade-strategy eager --group base --group dev
 
 install:
-    {{ justfile() }} update
+    {{ just_executable() }} update
