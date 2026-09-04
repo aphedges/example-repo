@@ -7,6 +7,8 @@ minimum_prek_version: 0.4.10
 default_language_version:
   # Use latest LTS release
   node: 24.20.0
+  # Use latest patch version of an actively supported release
+  python: 3.13.15
 repos:
   - repo: meta
     hooks:
