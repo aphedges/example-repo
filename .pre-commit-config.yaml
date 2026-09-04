@@ -102,9 +102,6 @@ repos:
     rev: v2.4.3
     hooks:
       - id: codespell
-        additional_dependencies:
-          # `tomllib` was added to stdlib in Python 3.11
-          - tomli==2.4.1 ; python_version < "3.11"
   - repo: local
     hooks:
       - id: just
