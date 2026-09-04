@@ -12,7 +12,20 @@ When setting up this repository, make sure to complete the following steps:
 
 ## Installation
 
-Use the provided justfile to install this project by running the following from the project root directory (the same directory as this README). Ensure the `python` in `PATH` is 3.13 before running this command:
+Use the provided justfile to install this project by running the following from the project root directory (the same directory as this README).
+
+Ensure these commands are in `PATH` and at least as new as the required versions:
+
+- `bash`: 5.0
+  - Older versions might work but haven't been tested
+- `just`: 1.55.0
+  - Declared in [`justfile`](justfile)
+- `pip`: 25.1
+  - Needed for the `--group` option
+- `python`: 3.13
+  - Declared in [`pyproject.toml`](pyproject.toml)
+
+Then, run this command to set up the repository:
 
 ```shell
 just install
