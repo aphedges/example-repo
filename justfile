@@ -45,7 +45,7 @@ yamllint: (precommit "yamllint")
 zizmor: (precommit "zizmor")
 
 precommit *ARGS:
-    pre-commit run --all-files {{ ARGS }}
+    prek run --all-files {{ ARGS }}
 
 check: precommit
 
