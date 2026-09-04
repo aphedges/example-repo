@@ -114,8 +114,8 @@ repos:
     hooks:
       - id: just
         name: just
-        language: system
-        entry: just --fmt --justfile
+        language: docker_image
+        entry: --entrypoint /just ghcr.io/casey/just:1.58.0 --fmt --justfile
         files: (?i)^\.?justfile$
         require_serial: true
       - id: mypy
