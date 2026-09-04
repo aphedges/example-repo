@@ -2,8 +2,10 @@ version = 1
 
 [[annotations]]
 path = [
+  # Doesn't support comments
   ".github/protect_default_branch.json",
-  "requirements-*.txt",
+  # Automatically generated
+  "requirements-lock.txt",
 ]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "Alex Hedges <git@alexhedges.dev>"
