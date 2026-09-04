@@ -58,6 +58,7 @@ update:
 upgrade:
     pip install --upgrade pip
     pip install --upgrade --upgrade-strategy eager --group base --group dev
+    prek update
 
 install:
     {{ just_executable() }} update
