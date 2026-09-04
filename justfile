@@ -1,3 +1,6 @@
+# `just` `1.55.0` introduced `minimum-version` setting
+set minimum-version := "1.55.0"
+
 set shell := ["bash", "-euc"]
 export PYTHONPATH := shell("realpath .")
 
