@@ -7,6 +7,5 @@ path = [
   # Automatically generated
   "requirements-lock.txt",
 ]
-precedence = "aggregate"
 SPDX-FileCopyrightText = "Alex Hedges <git@alexhedges.dev>"
 SPDX-License-Identifier = "CC0-1.0"
