@@ -3,15 +3,23 @@
 # Update this file:
 #   pre-commit autoupdate
 minimum_pre_commit_version: 1.15.0
+minimum_prek_version: 0.4.10
 default_language_version:
   # Use latest LTS release
   node: 24.20.0
+  # Use latest patch version of an actively supported release
+  python: 3.13.15
+update:
+  freeze: true
+  repos:
+    "https://github.com/lycheeverse/lychee":
+      exclude_tags: [nightly]
 repos:
   - repo: meta
     hooks:
       - id: check-useless-excludes
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # frozen: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -42,7 +50,7 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/sirosen/texthooks
-    rev: 0.7.1
+    rev: 869eecde9a62460e123fa60b83858fac426163e8 # frozen: 0.7.1
     hooks:
       - id: alphabetize-codeowners
       - id: fix-ligatures
@@ -51,11 +59,11 @@ repos:
       - id: fix-unicode-dashes
       - id: forbid-bidi-controls
   - repo: https://github.com/rbubley/mirrors-prettier # Use maintained fork of official mirror
-    rev: v3.9.6
+    rev: 0ee178619d696787ca73d210cc191d720868c631 # frozen: v3.9.6
     hooks:
       - id: prettier
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.13.1-1
+    rev: 05c1426671b9237fb5e1444dd63aa5731bec0dfb # frozen: v3.13.1-1
     hooks:
       - id: shfmt
         args: [
@@ -64,42 +72,42 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.6
+    rev: 321478e58f4938179c6b86e4ddfa923d1547a49b # frozen: v0.16.6
     hooks:
       - id: ruff-format
         args: [--exit-non-zero-on-fix]
       - id: ruff-check
         args: [--exit-non-zero-on-fix]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.49.1
+    rev: 5b5dddc4fb0f83c3ea1fc5616fa63e115dce83e0 # frozen: v0.49.1
     hooks:
       - id: markdownlint
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.38.0
+    rev: cba56bcde1fdd01c1deb3f945e69764c291a6530 # frozen: v1.38.0
     hooks:
       - id: yamllint
         args: [--strict]
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1-1
+    rev: a6564f5d57444e123433a5c9af733e3975c77229 # frozen: v0.11.0.1-1
     hooks:
       - id: shellcheck
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.12
+    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca # frozen: v1.7.12
     hooks:
       - id: actionlint
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.30.0
+    rev: cef8b8350da46d8114c7e6b7272aebdccdf193ce # frozen: v1.30.0
     hooks:
       - id: zizmor
         args:
           - --fix=safe
           - --strict-collection
   - repo: https://github.com/pypa/dependency-groups
-    rev: 1.3.2
+    rev: d21c4fb0b13dde29be98ecd63f9779018ca1bb26 # frozen: 1.3.2
     hooks:
       - id: lint-dependency-groups
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.3
+    rev: 57b21406f092110c18776e39b0bda50d37c945c8 # frozen: v2.4.3
     hooks:
       - id: codespell
   - repo: local
@@ -125,7 +133,7 @@ repos:
           - python
         require_serial: true
   - repo: https://github.com/lycheeverse/lychee
-    rev: lychee-v0.24.2
+    rev: 2bba271688c1abb1503097a064e6c3bc1d1b6a9b # frozen: lychee-v0.24.2
     hooks:
       - id: lychee
         # Only run manually because it can have false positives and spurious failures

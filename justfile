@@ -16,50 +16,36 @@ lock:
     # They install automatically on Linux as a requirement of PyTorch
     sed --in-place -e '/^\(nvidia-.*\|triton\)==.*/d' requirements-lock.txt
 
-actionlint:
-    pre-commit run --all-files actionlint
+actionlint: (precommit "actionlint")
 
-codespell:
-    pre-commit run --all-files codespell
+codespell: (precommit "codespell")
 
-just:
-    pre-commit run --all-files just
+just: (precommit "just")
 
-lychee:
-    pre-commit run --all-files --hook-stage manual lychee
+lychee: (precommit "lychee")
 
-markdownlint:
-    pre-commit run --all-files markdownlint
+markdownlint: (precommit "markdownlint")
 
-mypy:
-    pre-commit run --all-files mypy
+mypy: (precommit "mypy")
 
-prettier:
-    pre-commit run --all-files prettier
+prettier: (precommit "prettier")
 
-pylint:
-    pre-commit run --all-files pylint
+pylint: (precommit "pylint")
 
-ruff:
-    pre-commit run --all-files ruff-check
+ruff: (precommit "ruff-check")
 
-ruff-format:
-    pre-commit run --all-files ruff-format
+ruff-format: (precommit "ruff-format")
 
-shellcheck:
-    pre-commit run --all-files shellcheck
+shellcheck: (precommit "shellcheck")
 
-shfmt:
-    pre-commit run --all-files shfmt
+shfmt: (precommit "shfmt")
 
-yamllint:
-    pre-commit run --all-files yamllint
+yamllint: (precommit "yamllint")
 
-zizmor:
-    pre-commit run --all-files zizmor
+zizmor: (precommit "zizmor")
 
-precommit:
-    pre-commit run --all-files
+precommit *ARGS:
+    prek run --all-files {{ ARGS }}
 
 check: precommit
 
@@ -72,6 +58,7 @@ update:
 upgrade:
     pip install --upgrade pip
     pip install --upgrade --upgrade-strategy eager --group base --group dev
+    prek update
 
 install:
-    {{ justfile() }} update
+    {{ just_executable() }} update
