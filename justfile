@@ -22,7 +22,7 @@ codespell: (precommit "codespell")
 
 just: (precommit "just")
 
-lychee: (precommit "--hook-stage" "manual" "lychee")
+lychee: (precommit "lychee")
 
 markdownlint: (precommit "markdownlint")
 
