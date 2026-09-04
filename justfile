@@ -14,12 +14,6 @@ lock:
     pip freeze \
       --exclude-editable \
       >requirements-lock.txt
-    # Strip local versions so PyTorch is the same on Linux and macOS
-    sed --in-place -e 's/+[[:alnum:]]\+$$//g' requirements-lock.txt
-    # Remove nvidia-* and triton because they cannot be installed on macOS
-    # The packages have no sdists, and their wheels are not available for macOS
-    # They install automatically on Linux as a requirement of PyTorch
-    sed --in-place -e '/^\(nvidia-.*\|triton\)==.*/d' requirements-lock.txt
 
 actionlint: (precommit "actionlint")
 
