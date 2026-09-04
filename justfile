@@ -9,9 +9,11 @@ default:
     @just --list
 
 lock:
-    pip freeze >requirements-lock.txt
+    # Let `pip freeze` handle as many exclusions as it can
     # Remove editable packages because they are expected to be available locally
-    sed --in-place -e '/^-e .*/d' requirements-lock.txt
+    pip freeze \
+      --exclude-editable \
+      >requirements-lock.txt
     # Strip local versions so PyTorch is the same on Linux and macOS
     sed --in-place -e 's/+[[:alnum:]]\+$$//g' requirements-lock.txt
     # Remove nvidia-* and triton because they cannot be installed on macOS
