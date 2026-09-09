@@ -1,0 +1,11 @@
+version = 1
+
+[[annotations]]
+path = [
+  # Doesn't support comments
+  ".github/protect_default_branch.json",
+  # Automatically generated
+  "requirements-lock.txt",
+]
+SPDX-FileCopyrightText = "2024 Alex Hedges <git@alexhedges.dev>"
+SPDX-License-Identifier = "CC0-1.0"
