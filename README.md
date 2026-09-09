@@ -8,12 +8,11 @@ SPDX-License-Identifier: CC0-1.0
 
 ## Template usage
 
-This repository template is marked with CC0 1.0 Universal. To view a copy of this license, visit <http://creativecommons.org/publicdomain/zero/1.0>.
-
 When setting up this repository, make sure to complete the following steps:
 
-- Replace the `LICENSE` file with `LICENSE.MIT` and fill in the project owner in the new `LICENSE` file. If you would rather keep the CC0 license, then just delete `LICENSE.MIT` and edit the "License" section of `README.md` accordingly.
-- Fill in the project title in `README.md`
+- Fill in the project title of `README.md`
+- Update the below sections of `README.md` to match the project's information
+- Make changes so `just check` passes
 - Delete the "Template usage" section from `README.md`
 
 ## Installation
@@ -49,4 +48,6 @@ To test GitHub Actions workflows locally, install [`act`](https://github.com/nek
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project follows the [REUSE](https://reuse.software/) specification to express copyright information. All relevant licenses are in [`LICENSES/`](LICENSES/).
+
+This repository template is distributed under [CC0 1.0 Universal](LICENSES/CC0-1.0.txt).
