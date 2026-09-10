@@ -26,7 +26,7 @@ Ensure these commands are in `PATH` and at least as new as the required versions
 - `just`: 1.55.0
   - Declared in [`justfile`](justfile)
 - `pip`: 25.1
-  - Needed for the `--group` option
+  - Required for the `--group` option (as documented in [pip 25.1](https://pip.pypa.io/en/stable/news/#v25-1))
 - `python`: 3.13
   - Declared in [`pyproject.toml`](pyproject.toml)
 
