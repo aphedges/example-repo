@@ -19,6 +19,8 @@ update:
   repos:
     "https://github.com/lycheeverse/lychee":
       exclude_tags: [nightly]
+# Maintain _exact_ license contents for easier license detection
+exclude: ^LICENSES/.*
 repos:
   - repo: meta
     hooks:
