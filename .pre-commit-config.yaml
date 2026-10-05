@@ -78,6 +78,13 @@ repos:
             --indent=2,
             --case-indent, # Switch cases will be indented.
           ]
+  - repo: https://github.com/typstyle-rs/pre-commit-typstyle
+    rev: 5cb34b47e1f37c973e0eaaf0b6219f5facfc5d39 # frozen: v0.15.1
+    hooks:
+      - id: typstyle
+        args:
+          - --inplace
+          - --line-width=100
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: 321478e58f4938179c6b86e4ddfa923d1547a49b # frozen: v0.16.6
     hooks:

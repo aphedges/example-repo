@@ -45,6 +45,8 @@ shellcheck: (precommit "shellcheck")
 
 shfmt: (precommit "shfmt")
 
+typstyle: (precommit "typstyle")
+
 yamllint: (precommit "yamllint")
 
 zizmor: (precommit "zizmor")
