@@ -7,6 +7,7 @@
 # Update this file:
 #   pre-commit autoupdate
 minimum_pre_commit_version: 1.15.0
+# `prek` `0.4.10` introduced `freeze` option
 minimum_prek_version: 0.4.10
 default_language_version:
   # Use latest LTS release
