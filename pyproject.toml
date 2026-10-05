@@ -7,7 +7,7 @@ base = []
 dev = [
   # `mypy` `1.13.0` introduced `faster-cache` extra
   "mypy[faster-cache]>=1.13",
-  # `prek` `0.4.10` introduced freeze option
+  # Declared in `.pre-commit-config.yaml`
   "prek>=0.4.10",
   # Set a minimum version (released 2023-10-02, first to support `3.12`)
   # to prevent possible resolution problems
