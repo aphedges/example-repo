@@ -50,6 +50,11 @@ repos:
       - id: name-tests-test
         args: [--unittest]
       - id: no-commit-to-branch
+        args:
+          # Prevent commit to default branch
+          - --branch=main
+          # Prevent characters in branch names that cause problems in shells
+          - --pattern=.*[^\w./-].*
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/sirosen/texthooks
