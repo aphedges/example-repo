@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2026 Alex Hedges <git@alexhedges.dev>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Needed for https://github.com/pypa/dependency-groups
+# `16.1` needed for `packaging.requirements`
+# `22.0` needed to avoid old versions of `pyparsing` that lack appropriate wheels
+packaging>=22.0
+
+# Needed for https://github.com/adrienverge/yamllint
+# `5.1` needed for Python 3.7 support
+pyyaml>5.1
+
+# Needed for https://github.com/pre-commit/pre-commit-hooks
+# First version to not require version-specific API
+ruamel-yaml>=0.16
