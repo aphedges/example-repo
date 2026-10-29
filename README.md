@@ -44,7 +44,7 @@ This project uses various code quality tooling, all of which is automatically in
 
 All checks can be run with `just check`, and some additional automatic changes can be run with `just fix`.
 
-To test GitHub Actions workflows locally, install [`act`](https://github.com/nektos/act) and run it with `act`.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 
