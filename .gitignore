@@ -6,9 +6,7 @@
 # See upstream repo for more entries
 
 ### Project files
-.env
-/.cache/
-/data/
+
 
 ### Programming language files
 ## Java files
