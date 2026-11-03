@@ -45,6 +45,8 @@ For a [large][] [number] of [reasons], AI contributions are completely prohibite
 [number]: https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/
 [reasons]: https://sciactive.com/human-contribution-policy/
 
+More formally, this project adheres to the [SciActive Human Contribution Policy, Version 2-NE (No Exceptions)](https://sciactive.com/human-contribution-policy/version-2-ne/).
+
 ### License
 
 Unless otherwise specified, contributions, VCS logs, forge contents, and any other ancillary development data fall under the project's default license. Material that is not under a compatible license will be rejected.
