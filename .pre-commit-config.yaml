@@ -7,9 +7,9 @@ minimum_pre_commit_version: 1.15.0
 minimum_prek_version: 0.4.10
 default_language_version:
   # Use latest LTS release
-  node: 24.20.0
+  node: 24.22.2
   # Use latest patch version of an actively supported release
-  python: 3.13.15
+  python: 3.14.9
 update:
   freeze: true
   repos:
@@ -58,7 +58,7 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/sirosen/texthooks
-    rev: 869eecde9a62460e123fa60b83858fac426163e8 # frozen: 0.7.1
+    rev: 18040afd19e75f525c1d42bc64a5805982f1c9d0 # frozen: 1.0.0
     hooks:
       - id: alphabetize-codeowners
       - id: fix-ligatures
@@ -67,11 +67,11 @@ repos:
       - id: fix-unicode-dashes
       - id: forbid-bidi-controls
   - repo: https://github.com/rbubley/mirrors-prettier # Use maintained fork of official mirror
-    rev: 0ee178619d696787ca73d210cc191d720868c631 # frozen: v3.9.6
+    rev: 331f33fa4dfbcbca7c3da3620c137fde0faab273 # frozen: v3.9.10
     hooks:
       - id: prettier
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: 05c1426671b9237fb5e1444dd63aa5731bec0dfb # frozen: v3.13.1-1
+    rev: 479be5958357ba5ab65ce47172117348516860e9 # frozen: v3.14.1-1
     hooks:
       - id: shfmt
         args: [
@@ -80,21 +80,21 @@ repos:
             --case-indent, # Switch cases will be indented.
           ]
   - repo: https://github.com/typstyle-rs/pre-commit-typstyle
-    rev: 5cb34b47e1f37c973e0eaaf0b6219f5facfc5d39 # frozen: v0.15.1
+    rev: 4b63099824102a32da3f009f5a817f118cecd7ce # frozen: v0.15.2
     hooks:
       - id: typstyle
         args:
           - --inplace
           - --line-width=100
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 321478e58f4938179c6b86e4ddfa923d1547a49b # frozen: v0.16.6
+    rev: 25bcf95026b96e2dd3c0aec3090c3d6ef6ca2e6c # frozen: v0.17.3
     hooks:
       - id: ruff-format
         args: [--exit-non-zero-on-fix]
       - id: ruff-check
         args: [--exit-non-zero-on-fix]
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: 5b5dddc4fb0f83c3ea1fc5616fa63e115dce83e0 # frozen: v0.49.1
+    rev: cbcdc463be5464e25e3e955a511599a67b9b987f # frozen: v0.50.0
     hooks:
       - id: markdownlint
   - repo: https://github.com/adrienverge/yamllint
@@ -111,7 +111,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: cef8b8350da46d8114c7e6b7272aebdccdf193ce # frozen: v1.30.0
+    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7 # frozen: v1.32.0
     hooks:
       - id: zizmor
         args:
@@ -148,7 +148,7 @@ repos:
           - python
         require_serial: true
   - repo: https://github.com/fsfe/reuse-tool
-    rev: a1bb792acda6fd0724936b4ebbdbc8eceb9c0459 # frozen: v6.2.0
+    rev: ea739bff9c6daa1c4c8a5c5dfd069f3fb0374728 # frozen: v6.3.0
     hooks:
       - id: reuse
   - repo: https://github.com/lycheeverse/lychee
